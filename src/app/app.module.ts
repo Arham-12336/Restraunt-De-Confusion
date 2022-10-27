@@ -17,10 +17,12 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { MatDialogModule } from '@angular/material';
 
 import { LeaderserviceService } from './services/leaderservice.service';
 import { PromotionService } from './services/promotion.service';
 import { DishService } from './services/dish.service';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { DishService } from './services/dish.service';
     FooterComponent,
     ContactComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,11 @@ import { DishService } from './services/dish.service';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
+  ],
+  entryComponents:[
+    LoginComponent
   ],
   providers: [DishService, PromotionService,LeaderserviceService ],
   bootstrap: [AppComponent]
