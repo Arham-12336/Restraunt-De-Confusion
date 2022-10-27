@@ -19,6 +19,13 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MatDialogModule } from '@angular/material';
 
+//These will be used to form a dialog box
+import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatCheckboxModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+
+
 import { LeaderserviceService } from './services/leaderservice.service';
 import { PromotionService } from './services/promotion.service';
 import { DishService } from './services/dish.service';
@@ -45,6 +52,10 @@ import { LoginComponent } from './login/login.component';
     MatCardModule,
     MatButtonModule,
     MatListModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
     MatDialogModule
   ],
   entryComponents:[
