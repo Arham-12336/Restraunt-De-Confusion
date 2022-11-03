@@ -18,6 +18,9 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MatDialogModule } from '@angular/material';
+import {ReactiveFormsModule} from '@angular/forms'
+import { MatSelectModule } from '@angular/material';
+import { MatSlideToggleModule } from '@angular/material';
 
 //These will be used to form a dialog box
 import { MatFormFieldModule } from '@angular/material';
@@ -30,6 +33,7 @@ import { LeaderserviceService } from './services/leaderservice.service';
 import { PromotionService } from './services/promotion.service';
 import { DishService } from './services/dish.service';
 import { LoginComponent } from './login/login.component';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +59,9 @@ import { LoginComponent } from './login/login.component';
     MatCheckboxModule,
     MatInputModule,
     MatFormFieldModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatSlideToggleModule,
     FormsModule,
     MatDialogModule
   ],
