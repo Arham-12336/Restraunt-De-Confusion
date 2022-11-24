@@ -18,7 +18,12 @@ export class MenuComponent implements OnInit {
   constructor(private dishService: DishService) { }
 
   ngOnInit() {
-    this.dishes=this.dishService.getDishes();
+    this.dishService.getDishes()
+    .then((dishes)=>this.dishes);
+
+
+    
+    //This is how your component can hold on the promise when retrieve it now
 
   }
   onSelect(dish:Dish){
@@ -26,3 +31,5 @@ export class MenuComponent implements OnInit {
   }
 
 }
+
+//Dealing with the promises to getDishes

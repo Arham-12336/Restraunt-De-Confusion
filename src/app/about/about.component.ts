@@ -17,7 +17,8 @@ export class AboutComponent implements OnInit {
   constructor(private leaderServices:LeaderserviceService) { }
 
   ngOnInit() {
-    this.leaders=this.leaderServices.getLeaders();
+    this.leaderServices.getLeaders()
+    .then((leaders)=>this.leaders=leaders);
   }
   //This will give me access to all the leaders array
 
