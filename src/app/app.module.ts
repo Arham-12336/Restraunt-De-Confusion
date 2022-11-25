@@ -21,6 +21,7 @@ import { MatDialogModule } from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms'
 import { MatSelectModule } from '@angular/material';
 import { MatSlideToggleModule } from '@angular/material';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 //These will be used to form a dialog box
 import { MatFormFieldModule } from '@angular/material';
@@ -62,6 +63,7 @@ import { from } from 'rxjs';
     ReactiveFormsModule,
     MatSelectModule,
     MatSlideToggleModule,
+    MatProgressSpinnerModule,
     FormsModule,
     MatDialogModule
   ],

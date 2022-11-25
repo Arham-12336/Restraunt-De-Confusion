@@ -47,6 +47,11 @@
         </p>  -->
       </mat-list-item>
     </mat-list>
-  </div> 
+  </div>
+  <div fxFlex [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>loading ... please wait</h4>
+    <!--When the dishes are not been available the spinner will be shown-->
+  
+  </div>
 
 </div>

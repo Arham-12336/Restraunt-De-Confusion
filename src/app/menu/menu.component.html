@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div fxFlex>
+  <div fxFlex *ngIf="dishes">
     <mat-grid-list cols="2" rowHeight="200px">
       <mat-grid-tile *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.id]">
         <img height="200px" src={{dish.image}} alt={{dish.name}}> 
@@ -21,6 +21,15 @@
       </mat-grid-tile>
     </mat-grid-list>
   </div>
+
+</div>
+  <!-- If the dishes are null then this div wilol be shown otherwise
+  The upper div will be shown-->
+  <!-- <div fxFlex [hidden]="dishes">
+    <mat-spinner></mat-spinner><h4>loading ... please wait</h4>
+    When the dishes are not been available the spinner will be shown-->
+
+  <!-- </div> --> -->
   
   <!-- <div fxFLex *ngIf="selectedDish">
     <mat-card>
@@ -44,7 +53,7 @@
 
   </div> -->
 
-</div>
+
 <!-- matListAvatar makes the images into small circle look
     <mat-list fxFlex>
     <mat-list-item *ngFor="let dish of dishes">
