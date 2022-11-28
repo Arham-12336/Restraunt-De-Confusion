@@ -22,6 +22,12 @@
     </mat-grid-list>
   </div>
 
+   <div fxFlex [hidden]="dishes">
+    <mat-spinner></mat-spinner><h4>loading ... please wait</h4>
+    <!-- When the dishes are not been available the spinner will be shown--> 
+
+  </div> 
+
 </div>
   <!-- If the dishes are null then this div wilol be shown otherwise
   The upper div will be shown-->
@@ -29,7 +35,7 @@
     <mat-spinner></mat-spinner><h4>loading ... please wait</h4>
     When the dishes are not been available the spinner will be shown-->
 
-  <!-- </div> --> -->
+  <!-- </div> --> 
   
   <!-- <div fxFLex *ngIf="selectedDish">
     <mat-card>
