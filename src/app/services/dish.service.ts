@@ -28,7 +28,7 @@ export class DishService {
   getDish(id:string): Observable<Dish>{
     return of(DISHES.filter((dish)=>(dish.id==id))[0]).pipe(delay(2000));
     // provide the dish from the array
-//updated the get dishes to make use of the obervable and then 
+    //updated the get dishes to make use of the obervable and then 
     //convert it into a promise and send it back to the
 
   }
@@ -37,5 +37,12 @@ export class DishService {
     return of(DISHES.filter((dish)=>dish.featured)[0]).pipe(delay(2000));
 //updated the getFeaturedDish to make use of the obervable and then 
     //convert it into a promise and send it back to the
+  }
+    //getDishIds is returning an observable of type string
+  getDishIds(): Observable<string[] | any>{
+    return of(DISHES.map(dish=>dish.id))
+    //.map is a javaScript method it took the ids from each of the dishes
+    // and instead of getting it one by one it will make a new array with only dish ids in it
+
   }
 }

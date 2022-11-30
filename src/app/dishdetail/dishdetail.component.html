@@ -6,8 +6,8 @@
     fxLayoutGap="10px" 
     fxLayoutGap.xs="0">
 
-  <div fxFlex="40">    
-   <div fxFLex *ngIf="dish">
+  <div fxFlex="40" *ngIf="dish">    
+   <div fxFLex >
     <mat-card>
     <mat-card-header>
       <mat-card-title>
@@ -21,9 +21,16 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
+      <button mat-button [routerLink]="['/dishdetail',prev]">
+        <span class="fa fa-chevron-left fa-lg"></span>
+      </button>
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
       <button mat-button (click)="goback()">BACK</button>
+      <span class="flex spacer"></span>
+      <button mat-button [routerLink]="['/dishdetail',prev]">
+        <span class="fa fa-chevron-right fa-lg"></span>
+      </button>
     </mat-card-actions>
     </mat-card>
 
@@ -31,20 +38,18 @@
   </div>
   </div>
 
-
-
-  <div fxFlex="40">
+  <div fxFlex="40" *ngIf="dish">
     <mat-list fxFlex>
       <mat-list-item *ngIf="dish">
         <h3>Comments</h3>
-          <!-- <mat-list-item *ngFor="let comment of dish.comment">
+          <!-- <mat-list-item *ngFor="let comment of dish.Comments">
           <h4 matLine>{{comment.comment}}</h4>
           <p matLine>{{comment.rating}}Stars</p>
           <p matLine>
           <span>--{{comment.author}} {{comment.date | date}}
           </span>
   
-        </p>  -->
+        </p>  --> -->
       </mat-list-item>
     </mat-list>
   </div>

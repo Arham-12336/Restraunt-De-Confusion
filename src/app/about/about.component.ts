@@ -18,7 +18,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     this.leaderServices.getLeaders()
-    .then((leaders)=>this.leaders=leaders);
+    .subscribe((leaders)=>this.leaders=leaders);
   }
   //This will give me access to all the leaders array
 
