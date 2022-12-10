@@ -3,7 +3,7 @@ import { Dish } from "./dish";
 export const DISHES: Dish[] = [
     {
         id: '0',
-        name: 'Uthappizza',
+        name: 'pizza',
         image: '/assets/images/uthappizza.png',
         category: 'mains',
         featured: true,
